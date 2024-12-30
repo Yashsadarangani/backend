@@ -30,6 +30,7 @@ pipeline {
                 echo 'checking that environment meets the node.js '
                 bat '''
                 npm run lint
+                npm run build
                 '''
             }
         }
