@@ -25,6 +25,14 @@ pipeline {
                 '''
             }
         }
+        stage ('Lint'){
+            steps {
+                echo 'checking that environment meets the node.js '
+                bat '''
+                npm run lint
+                '''
+            }
+        }
 
         stage('SonarAnalysis') {
             environment {
